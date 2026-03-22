@@ -725,6 +725,21 @@ h3 {
 
 .payment-box-account span { font-weight: 400; color: var(--text-light); }
 
+.payment-detail {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-top: 0.75rem;
+  border-top: 0.5px dashed var(--border);
+}
+
+.payment-detail p {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  max-width: none;
+}
+
 /* Storno accordion */
 .storno {
   background-color: var(--white);
@@ -1260,7 +1275,7 @@ h3 {
    ═══════════════════════════════════════════════════════════════ */
 .media-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
 }
 
