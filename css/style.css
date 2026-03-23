@@ -433,23 +433,17 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: end;
+  align-items: start;
 }
 
-/* Foto dole, vycentrované */
-.about-photo-row {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: center;
-}
-
-.about-photo-row img {
+.about-inline-photo {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   width: 100%;
   max-width: 420px;
   object-fit: cover;
-  max-height: 520px;
+  max-height: 480px;
+  margin-top: 1.5rem;
 }
 
 .about-content {
@@ -503,8 +497,8 @@ h3 {
 .cert-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding-top: 0.5rem;
+  gap: 2.5rem;
+  padding-top: 4.5rem;
 }
 
 .cert-group-label {
