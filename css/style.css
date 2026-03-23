@@ -11,9 +11,9 @@
   --white:       #FDFAF6;   /* teplá bílá – ne klinická */
 
   /* Šalvějová zelená – příroda, klid, obnova */
-  --teal:        #507749;   /* lesní šalvěj – CTA tlačítka, step čísla, back-to-top */
-  --teal-mid:    #3E6038;   /* tmavší šalvěj – hover stavy */
-  --teal-light:  #e0ead0;   /* teplá šalvějová tinta – odznaky, labely (dle mockupu) */
+  --teal:        #2C5F2C;   /* hluboká lesní zelená – CTA tlačítka, step čísla, back-to-top */
+  --teal-mid:    #1E4520;   /* tmavší hover stav */
+  --teal-light:  #DCE8D8;   /* světlá tinta pro odznaky a labely */
 
   /* Teplý jantar – druhý akcent (pozor, ikony a detaily, ne CTA) */
   --orange:      #B87A40;   /* teplý jantar – mindfulness ikona, varování */
@@ -37,8 +37,8 @@
   --border:      rgba(55,45,35,0.13);   /* o něco vyšší opacita kvůli hairline 0.5px */
   --radius:      10px;
   --radius-lg:   16px;
-  --shadow:      0 2px 12px rgba(40,32,24,0.07);
-  --shadow-lg:   0 8px 32px rgba(40,32,24,0.10);
+  --shadow:      0 2px 16px rgba(30,40,20,0.09);
+  --shadow-lg:   0 8px 32px rgba(30,40,20,0.13);
   --transition:  0.2s ease;
   --nav-h:       68px;
 
@@ -400,9 +400,7 @@ h3 {
 .hero-content h1 { margin-bottom: 0.1rem; }
 
 .hero-highlight {
-  display: inline;
-  background: linear-gradient(transparent 68%, rgba(176, 203, 173, 0.65) 68%);
-  padding: 0 3px;
+  color: var(--teal-mid);
 }
 
 .hero-sub {
@@ -460,8 +458,8 @@ h3 {
   gap: 1.5rem;
   padding: 1.1rem 1.5rem;
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius);
+  box-shadow: var(--shadow);
   width: fit-content;
 }
 
@@ -494,8 +492,8 @@ h3 {
 /* Cert list */
 .cert-list {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
   padding: 1.5rem 2rem;
   margin-top: 2.5rem;
 }
@@ -552,12 +550,12 @@ h3 {
 
 .card {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  box-shadow: var(--shadow);
 }
 
 
@@ -573,9 +571,12 @@ h3 {
 
 .card-icon-wrap svg { width: 22px; height: 22px; }
 
-.card-icon-wrap--sage   { background-color: var(--sage-light);   color: var(--sage); }
-.card-icon-wrap--purple { background-color: var(--purple-light); color: var(--purple); }
-.card-icon-wrap--orange { background-color: var(--orange-light); color: var(--orange); }
+.card-icon-wrap--sage,
+.card-icon-wrap--purple,
+.card-icon-wrap--orange {
+  background: linear-gradient(135deg, #C8E6C4 0%, #A0CC9C 100%);
+  color: var(--teal-mid);
+}
 
 .card p { color: var(--text-mid); font-size: 0.93rem; }
 
@@ -612,17 +613,17 @@ h3 {
 
 .pricing-card {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  box-shadow: var(--shadow);
 }
 
 .pricing-card--featured {
-  border-color: var(--teal-mid);
-  box-shadow: 0 0 0 0.5px var(--teal-mid);
+  border-top: 3px solid var(--teal);
+  box-shadow: var(--shadow-lg);
 }
 
 
@@ -690,8 +691,8 @@ h3 {
   align-items: flex-start;
   gap: 0.9rem;
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
   padding: 1.5rem;
 }
 
@@ -743,9 +744,9 @@ h3 {
 /* Storno accordion */
 .storno {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .storno-header {
@@ -853,8 +854,8 @@ h3 {
 
 .contact-card {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
@@ -1084,12 +1085,12 @@ h3 {
 
 .benefit {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  box-shadow: var(--shadow);
 }
 
 
@@ -1097,7 +1098,7 @@ h3 {
   width: 40px;
   height: 40px;
   border-radius: var(--radius);
-  background-color: var(--teal-light);
+  background: linear-gradient(135deg, #C8E6C4 0%, #A0CC9C 100%);
   color: var(--teal-mid);
   display: flex;
   align-items: center;
@@ -1124,9 +1125,9 @@ h3 {
 
 .pain-card {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
-  border-left: 3px solid var(--teal-light);
   border-radius: var(--radius);
+  border-left: 3px solid var(--teal);
+  box-shadow: var(--shadow);
   padding: 1.1rem 1.4rem;
   font-size: 0.95rem;
   color: var(--text-mid);
@@ -1148,21 +1149,21 @@ h3 {
 
 .step {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 2rem 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
   text-align: center;
+  box-shadow: var(--shadow);
 }
 
 .step-num {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--teal);
-  color: var(--white);
+  background: linear-gradient(135deg, #C8E6C4 0%, #A0CC9C 100%);
+  color: var(--teal-mid);
   font-size: 1.1rem;
   font-weight: 600;
   display: flex;
@@ -1200,12 +1201,12 @@ h3 {
 
 .testimonial {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 2.5rem 3rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  box-shadow: var(--shadow);
 }
 
 .testimonial blockquote p {
@@ -1234,9 +1235,9 @@ h3 {
 
 .testimonial-stats {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.25rem 2rem;
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1281,8 +1282,8 @@ h3 {
 
 .media-card {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
@@ -1348,9 +1349,9 @@ h3 {
 
 .faq-item {
   background-color: var(--white);
-  border: 0.5px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .faq-item summary {
